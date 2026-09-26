@@ -1,0 +1,6 @@
+opencv-python~=5.0.0.93
+customtkinter~=6.0.0
+matplotlib~=3.11.2
+numpy~=2.5.3
+pandas~=3.0.6
+pillow~=12.3.0
