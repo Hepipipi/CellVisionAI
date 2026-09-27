@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f7f8"><title>CellVision — лабораторная визуализация</title>
+  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/cbc.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#analysis"><span class="brand-mark">cv</span><span>CellVision<small>LAB · RESEARCH</small></span></a>
+      <div class="side-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <nav class="nav-list">
+        <button class="nav-link active" data-view="analysis"><span class="nav-icon">◉</span> Анализ снимка</button>
+        <a class="nav-link" href="/causes.html"><span class="nav-icon">⌁</span> Лабораторные паттерны</a>
+        <a class="nav-link" href="/lab.html"><span class="nav-icon">✦</span> Учебная лаборатория</a>
+        <button class="nav-link" data-view="comparison"><span class="nav-icon">↔</span> Динамика</button>
+        <button class="nav-link" data-view="library"><span class="nav-icon">▦</span> Атлас клеток</button>
+        <button class="nav-link" data-view="research"><span class="nav-icon">⌁</span> ИИ и протокол</button>
+        <button class="nav-link" data-view="hospitals"><span class="nav-icon">＋</span> Гематология в Бишкеке</button>
+        <button class="nav-link" data-view="profile"><span class="nav-icon">◌</span> Профиль и история</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="local-note"><span class="secure-dot"></span><div><b>Локальная сессия</b><small>Данные на этом компьютере</small></div></div><button id="logoutBtn" class="logout-link hidden">Выйти из аккаунта</button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div><span class="eyebrow">CELLVISION / <span id="crumb">ЛАБОРАТОРИЯ</span></span><h1 id="pageTitle">Анализ снимка</h1></div><div class="top-actions"><div id="userBadge" class="user-badge"><span class="avatar">CV</span><span id="userName">Гость</span></div><button class="button button-dark" id="openAuth">Войти <span>↗</span></button></div></header>
+      <div class="medical-notice"><span>i</span><div><b>Исследовательский инструмент</b> · анализ изображения не подтверждает и не исключает анемию. Для оценки используйте лабораторный гемоглобин и консультацию врача.</div></div>
+
+      <section id="view-analysis" class="view active">
+        <div class="intro-row"><div><h2>Морфология мазка крови</h2><p>Фокус, освещение, окраска, пыль и наложение клеток затрудняют единообразный анализ; ручные измерения также могут различаться между наблюдателями. CellVision помогает оценить качество кадра, визуализировать морфологию и сравнить разметки для исследовательской работы.</p></div><button class="button button-light" id="explainBtn">Как читать результаты <span>↗</span></button></div>
+        <div class="work-grid">
+          <div class="panel upload-panel">
+            <div class="panel-head"><div><span class="step">01</span><h3>Изображение</h3></div><span class="subtle">PNG · JPG · TIFF · до 12 МБ</span></div>
+            <label class="dropzone" id="dropzone"><input id="fileInput" type="file" accept="image/*" hidden><span class="upload-icon">↑</span><b>Перетащите снимок сюда</b><small>или <u>выберите файл</u> на устройстве</small></label>
+            <div class="or-divider"><span>ИЛИ СОЗДАЙТЕ ПРИМЕР</span></div>
+            <div class="sample-row"><select id="sampleKind"><option value="mixed">Сложный · смешанная морфология</option><option value="microcytic">Микроцитарные клетки · учебная схема</option><option value="macrocytic">Макроцитарные клетки · учебная схема</option><option value="anisocytosis">Выраженный разброс размеров · схема</option><option value="sickle">Серповидные формы · схема</option></select><button id="sampleBtn" class="button button-light">Создать</button></div>
+            <div class="image-preview hidden" id="previewWrap"><img id="previewImage" alt="Предпросмотр мазка"><div><b id="imageName">Снимок</b><small id="imageDimensions"></small></div><button id="removeImage" aria-label="Удалить снимок">×</button></div>
+            <div class="calibration-box"><b>Калибровка масштаба</b><p>Измерьте масштабную линейку на снимке в пикселях и укажите её физическую длину.</p><div class="hb-box"><div class="hb-field"><label for="barPixels">Длина линейки, px</label><input id="barPixels" type="number" min="1" placeholder="250"></div><div class="hb-field"><label for="barMicrons">Длина линейки, µm</label><input id="barMicrons" type="number" min="0.01" placeholder="50"></div></div><small id="calibrationResult">Без значений измерения остаются в пикселях.</small></div>
+            <div class="panel-separator"></div>
+            <div class="panel-head"><div><span class="step">02</span><h3>Лабораторный показатель</h3></div><span class="subtle">необязательно</span></div>
+            <div class="hb-box"><div class="hb-field"><label for="population">Группа</label><select id="population"><option value="woman">Женщина, не беременна · 15–65 лет</option><option value="man">Мужчина · 15–65 лет</option><option value="pregnant">Беременность</option><option value="child_6_23">Ребёнок 6–23 месяца</option><option value="child_24_59">Ребёнок 24–59 месяцев</option><option value="child_5_11">Ребёнок 5–11 лет</option><option value="child_12_14">Подросток 12–14 лет</option></select></div><div class="hb-field"><label for="hemoglobin">Гемоглобин <span>г/л</span></label><input id="hemoglobin" type="number" min="10" max="250" placeholder="Например, 118"></div></div>
+            <div class="cbc-fields"><div class="hb-field"><label for="mcv">MCV · fL</label><input id="mcv" type="number" min="50" max="150" step="0.1" placeholder="ср. объём"></div><div class="hb-field"><label for="mch">MCH · pg</label><input id="mch" type="number" min="10" max="50" step="0.1" placeholder="Hb/эритроцит"></div><div class="hb-field"><label for="mchc">MCHC · г/л</label><input id="mchc" type="number" min="200" max="450" step="1" placeholder="концентрация Hb"></div><div class="hb-field"><label for="rdw">RDW · %</label><input id="rdw"> </div><div class="hb-field"><label for="rbc">RBC · 10¹²/л</label><input id="rbc" type="number" min="0.5" max="12" step="0.01" placeholder="эритроциты"></div><div class="hb-field"><label for="hematocrit">HCT · %</label><input id="hematocrit" type="number" min="5" max="75" step="0.1" placeholder="гематокрит"></div></div>
+            <div class="hb-field trimester-field hidden" id="trimesterField"><label for="trimester">Триместр беременности</label><select id="trimester"><option value="1">Первый триместр</option><option value="2">Второй триместр</option><option value="3">Третий триместр</option></select></div>
+            <div class="hb-help">Если показатель неизвестен, оставьте поле пустым. Hb сравнивается с выбранным порогом, а индексы описываются как ориентировочный паттерн. Экспериментальная CBC-модель не выводится как вероятность анемии. Возраст профиля используется только для ограничения взрослой группы. <a href="https://www.who.int/publications/i/item/9789240088542" target="_blank" rel="noopener">Пороги ВОЗ, 2024 ↗</a></div>
+            <div class="report-upload">
+              <b>Загрузить фото бланка общего анализа крови</b>
+              <p>Распознаем Hb и эритроцитарные индексы. Проверьте и при необходимости исправьте значения выше.</p>
+              <input id="cbcReportInput" type="file" accept="image/*" aria-label="Фото бланка CBC">
+              <button id="cbcOcrBtn" class="button button-light" type="button">Распознать показатели</button>
+              <small id="cbcOcrStatus" aria-live="polite">Для распознавания изображение отправляется во внешний сервис OCR.space. Не загружайте бланки с ФИО, датой рождения и другими идентификаторами.</small>
+              <details><summary>Распознанный текст бланка</summary><pre id="cbcOcrText"></pre></details>
+            </div>
+            <button id="assessCbcBtn" class="button button-primary button-wide" type="button">Оценить лабораторный бланк</button>
+            <div id="cbcOnlyResult" class="cbc-only-result hidden" aria-live="polite"></div>
+            <button id="analyzeBtn" class="button button-primary button-wide" disabled>Запустить исследовательский анализ <span>→</span></button>
+          </div>
+          <div class="panel results-panel">
+            <div class="panel-head"><div><span class="step">03</span><h3>Результаты</h3></div><span class="status-pill" id="resultStatus">ОЖИДАНИЕ</span></div>
+            <div id="emptyResults" class="empty-state"><div class="empty-art"><span>RBC</span><i>·</i><i>·</i></div><b>Здесь появится результат анализа</b><p>Загрузите снимок и запустите обработку, чтобы увидеть сегментацию и морфометрические показатели.</p></div>
+            <div id="resultContent" class="hidden">
+              <div class="assessment-card" id="assessmentCard"><div class="assessment-icon" id="assessmentIcon">i</div><div><span class="eyebrow">ЛАБОРАТОРНЫЙ СКРИНИНГ</span><h3 id="assessmentTitle">—</h3><p id="assessmentText"></p></div></div>
+              <div class="whole-image-card"><b>Лабораторные показатели и изображение</b><p id="imageScreenText"></p><p id="morphologySummary"></p><p id="cbcPatternText"></p></div>
+              <div class="image-pair"><figure><img id="inputResultImage" alt="Исходное изображение"><figcaption>Исходный снимок</figcaption></figure><figure><img id="segmentedImage" alt="Результат сегментации"><figcaption>Сегментация · Watershed</figcaption></figure></div>
+              <div class="metric-grid" id="metricGrid"></div>
+              <div class="quality-card" id="qualityCard"></div>
+              <div class="ai-card"><div><b>Экспериментальный ИИ-классификатор</b><p id="aiStatus">Не обучен: нужны экспертно размеченные клетки.</p></div><button class="button button-light" data-goto="research">Настроить →</button></div>
+              <div class="chart-wrap"><div class="chart-title"><b>Распределение площади</b><small>px² · после сегментации</small></div><canvas id="histogram" height="120"></canvas></div>
+              <div class="mask-review"><div class="panel-head"><div><span class="step">04</span><h3>Проверка сегментации вручную</h3></div><span id="maskMetric" class="subtle">нет эталонных контуров</span></div><p>Зажмите и обведите клетки/области. Зелёным показана маска алгоритма, красным — ручная разметка. Сохранение считает Dice и IoU по пикселям.</p><canvas id="maskCanvas" aria-label="Холст ручной разметки контуров"></canvas><div class="result-actions"><button id="drawMaskBtn" class="button button-light">Начать разметку</button><button id="clearMaskBtn" class="button button-light">Очистить контуры</button><button id="saveMaskBtn" class="button button-primary">Сохранить и сравнить</button></div></div>
+              <div class="annotation-box"><div class="panel-head"><div><span class="step">05</span><h3>Экспертная классификация клеток</h3></div><input id="reviewerName" placeholder="Эксперт / код рецензента" aria-label="Имя эксперта"></div><p>Отметьте класс для каждой выделенной области. Сравнение меток с ИИ остаётся исследовательским и зависит от корректности сегментации.</p><div id="annotationTable"></div><button id="saveAnnotations" class="button button-light">Сохранить метки</button><span id="annotationStatus"></span>
+                <details class="independent-review"><summary>Сравнить двух независимых наблюдателей</summary><p>Каждый наблюдатель размечает клетки отдельно. Коэффициент согласия относится только к этому изображению и не подтверждает медицинскую точность.</p><div class="reviewer-names"><label>Наблюдатель A<input id="reviewerA" placeholder="Имя или код"></label><label>Наблюдатель B<input id="reviewerB" placeholder="Имя или код"></label></div><div id="independentTable"></div><button id="saveIndependent" class="button button-light" type="button">Сохранить обе разметки и сравнить</button><p id="independentResult" aria-live="polite"></p></details>
+              </div>
+              <div class="result-actions"><button class="button button-light" id="csvBtn">↓ CSV клеток</button><button class="button button-light" id="pdfBtn">↓ Отчёт / PDF</button><button class="button button-light" id="cleanBtn">Сравнить очистку</button></div>
+              <div id="cleanComparison" class="clean-comparison hidden"><div><img id="cleanBefore" alt="До очистки"><small>До</small></div><div><img id="cleanAfter" alt="После очистки"><small>После · медианный фильтр</small></div><p id="cleanNote"></p></div>
+            </div>
+          </div>
+        </div>
+        <div class="explain-strip" id="explainStrip"><div class="explain-icon">✳</div><div><b>Что делает этот анализ?</b><p>Выделяет похожие на эритроциты области и рассчитывает их двумерные признаки: площадь, размерный разброс, округлость и вытянутость. Это помогает исследовать изображение, но не определяет концентрацию гемоглобина, причину анемии или диагноз.</p></div><a href="#library" data-goto="library">О методе и ограничениях ↗</a></div>
+      </section>
+
+      <section id="view-comparison" class="view">
+        <div class="intro-row"><div><h2>Динамика анализов</h2><p>Визуально сравните два снимка из своей истории. Изменение изображения само по себе не означает улучшение или ухудшение здоровья.</p></div></div>
+        <div class="panel comparison-panel"><div class="comparison-controls"><label>Сравнить с анализом<select id="compareSelect"><option value="">Загрузите историю…</option></select></label><button id="compareBtn" class="button button-primary">Показать сравнение</button></div><div id="compareEmpty" class="empty-state compact"><b>Выберите два исследования</b><p>Сначала сохраните минимум два анализа, затем выберите исходный.</p></div><div id="compareResult" class="hidden"></div></div>
+      </section>
+
+      <section id="view-library" class="view">
+        <div class="intro-row"><div><h2>Атлас морфологии эритроцитов</h2><p>Учебные векторные схемы распространённых форм. Это не фотографии пациентов и не инструмент самостоятельной диагностики.</p></div><span class="tag">УЧЕБНЫЙ СПРАВОЧНИК</span></div>
+        <div class="library-grid">
+          <article class="atlas-card"><img src="/assets/normal.svg" alt="Схема нормальных эритроцитов"><div class="atlas-copy"><span class="eyebrow">УСЛОВНАЯ НОРМА</span><h3>Нормоциты</h3><p>Преимущественно округлые клетки относительно сходного диаметра с центральным просветлением. Изображение мазка не измеряет гемоглобин.</p></div></article>
+          <article class="atlas-card"><img src="/assets/microcytic.svg" alt="Схема микроцитоза"><div class="atlas-copy"><span class="eyebrow">РАЗМЕР / ОКРАСКА</span><h3>Микроцитоз и гипохромия</h3><p>Мелкие эритроциты и более широкое центральное просветление могут встречаться при железодефиците и некоторых гемоглобинопатиях. Нужны ОАК и дообследование.</p></div></article>
+          <article class="atlas-card"><img src="/assets/macrocytic.svg" alt="Схема макроцитоза"><div class="atlas-copy"><span class="eyebrow">РАЗМЕР / ФОРМА</span><h3>Макроцитоз</h3><p>Увеличенные клетки встречаются при разных состояниях, включая дефицит B₁₂/фолата, болезни печени и действие лекарств. По картинке причину не установить.</p></div></article>
+          <article class="atlas-card"><img src="/assets/sickle.svg" alt="Схема серповидных эритроцитов"><div class="atlas-copy"><span class="eyebrow">ФОРМА</span><h3>Серповидные формы</h3><p>Серпоподобная форма может наблюдаться при серповидноклеточном заболевании. Подтверждение требует клинических и специальных лабораторных исследований.</p></div></article>
+          <article class="atlas-card"><img src="/assets/anisocytosis.svg" alt="Схема анизоцитоза"><div class="atlas-copy"><span class="eyebrow">РАЗБРОС РАЗМЕРА</span><h3>Анизоцитоз</h3><p>Заметная вариация размеров клеток. Лабораторный RDW рассчитывается анализатором крови; размерный CV на снимке в px² не является RDW.</p></div></article>
+          <article class="atlas-card method-card"><div class="method-symbol">CV</div><div class="atlas-copy"><span class="eyebrow">МЕТОД И ОГРАНИЧЕНИЯ</span><h3>Что измеряет CellVision</h3><p>Watershed-сегментация разделяет области, после чего вычисляются площадь, эквивалентный диаметр, отношение сторон, круглость, эксцентриситет и разброс размеров.</p><p><b>Плюсы прототипа:</b> быстрое визуальное наложение контуров, измерения отдельных объектов, CSV и повторяемое сравнение при одинаковых условиях съёмки.</p><p><b>Ограничения:</b> нет клинической валидации, калибровки масштаба и контроля качества мазка. Перекрытия, окраска, увеличение и камера влияют на цифры.</p><a href="https://www.who.int/publications/i/item/9789240088542" target="_blank" rel="noopener">Пороговые значения гемоглобина ВОЗ ↗</a></div></article>
+        </div>
+        <div class="library-grid"><article class="atlas-card method-card"><div class="atlas-copy"><span class="eyebrow">ДРУГИЕ ЭРИТРОЦИТЫ</span><h3>Сфероциты, мишеневидные клетки и фрагменты</h3><p><b>Сфероциты</b> — округлые клетки с уменьшенным или отсутствующим центральным просветлением. <b>Мишеневидные клетки</b> имеют центральную окрашенную зону, светлый ободок и внешний контур. <b>Шистоциты</b> — фрагменты эритроцитов с разной формой. Эти находки оценивают в мазке вместе с лабораторными данными; каждая может иметь несколько причин.</p></div></article><article class="atlas-card method-card"><div class="atlas-copy"><span class="eyebrow">ОТДЕЛЬНЫЕ НАПРАВЛЕНИЯ · ПОКА НЕ РАСПОЗНАЮТСЯ</span><h3>Лейкоциты, тромбоциты и малярийные паразиты</h3><p>Дифференцировка типов и поиск незрелых форм лейкоцитов требуют специализированной модели и экспертной проверки. Подсчёт тромбоцитов и скоплений на мазке не заменяет общий анализ крови и коагуляционные исследования. Малярийные паразиты ищут на подходяще окрашенных толстых/тонких мазках; отрицательный снимок не исключает инфекцию, оценку должен проводить опытный микроскопист.</p></div></article></div>
+        <div class="source-note">Схемы созданы программно для обучения. Не используйте их для постановки диагноза. Порог анемии зависит от возраста, пола, беременности и других факторов; это не клинический калькулятор. Справка: <a href="https://medlineplus.gov/lab-tests/blood-smear/" target="_blank" rel="noopener">MedlinePlus: blood smear</a> · <a href="https://www.nhlbi.nih.gov/health/blood-tests" target="_blank" rel="noopener">NHLBI: blood tests</a> · <a href="https://www.cdc.gov/malaria/hcp/diagnosis-testing/malaria-diagnostic-tests.html" target="_blank" rel="noopener">CDC: malaria tests</a>.</div>
+      </section>
+
+      <section id="view-hospitals" class="view">
+        <div class="intro-row"><div><h2>Гематологическая помощь в Бишкеке</h2><p>Подборка учреждений по профильным услугам, а не рейтинг качества лечения. Проверьте профиль врача, возрастной приём, расписание и цену напрямую перед визитом.</p></div><span class="tag">ПРОВЕРЕНО 26.09.2026</span></div>
+        <div class="hospital-intro"><div class="hospital-symbol">＋</div><div><b>Куда обратиться при анемии?</b><p>Начните с терапевта или гематолога и общего анализа крови. При внезапной одышке, обмороке, боли в груди или резком ухудшении состояния — срочная помощь по номеру <b>103</b>.</p></div></div>
+        <div id="hospitalList" class="hospital-list"></div>
+        <div class="source-note">Оценки взяты из карточек внешних сервисов и могут меняться; число отзывов небольшое или рейтинг может относиться ко всей клинике. Отзывы не являются оценкой медицинской эффективности. Контакт и расписание уточняйте у учреждения.</div>
+      </section>
+
+      <section id="view-research" class="view">
+        <div class="intro-row"><div><h2>Исследовательский режим</h2><p>Инструменты для просмотра микрофотографий и учебной работы. Автоматические результаты пока требуют независимой проверки.</p></div><span class="tag" id="modelBadge">МОДЕЛЬ НЕ ОБУЧЕНА</span></div>
+        <div class="panel research-panel">
+          <h3>Морфология клеток</h3><p>Прототип показывает сегментированные объекты, измерения и исследовательскую классификацию отдельных клеток. Классификация форм не устанавливает анемию и не заменяет оценку специалиста.</p>
+          <h3>Лабораторный бланк</h3><p>Можно внести значения CBC или загрузить бланк для OCR. После проверки распознанных полей сайт сравнивает гемоглобин с выбранным порогом и описывает эритроцитарные индексы. Процент экспериментальной CBC-модели не показывается: её качество не подтверждено независимой клинической проверкой.</p>
+          <h3>Обучение классификатора</h3><p>Для локального эксперимента выберите ZIP с изображениями клеток в отдельных папках train и test. Результат будет относиться только к предоставленной выборке.</p>
+          <label class="button button-light file-label">Выбрать ZIP датасет<input id="datasetInput" type="file" accept=".zip" hidden></label> <span id="datasetName">Файл не выбран</span> <button id="trainModel" class="button button-primary" disabled>Обучить и оценить</button><div id="modelReport"></div>
+          <p class="hb-help">Чтобы оценить переносимость, разделяйте снимки по пациентам и мазкам до извлечения клеток. Нужны независимые изображения и согласованная экспертная разметка.</p>
+        </div>
+        <div class="panel protocol-panel"><h3>Следующий этап проверки</h3><ol><li>Зафиксировать источник данных, тип окраски, микроскоп и число исходных снимков.</li><li>Разделить снимки по пациентам и мазкам на разработку и независимый тест.</li><li>Попросить двух наблюдателей независимо отметить контуры и морфологию клеток.</li><li>Сопоставить автоматическую сегментацию с эталонными масками и разобрать ошибки.</li><li>Проверить модель на снимках другого источника или микроскопа.</li></ol><p><b>Открытые материалы для будущей работы:</b> <a href="https://doi.org/10.5281/zenodo.7801430" target="_blank" rel="noopener">RedTell DSE</a> · <a href="https://data.mendeley.com/datasets/hms3sjzt7f/1" target="_blank" rel="noopener">AneRBC</a> · <a href="https://doi.org/10.6084/m9.figshare.13053968" target="_blank" rel="noopener">Expert Annotated RBC</a> · <a href="https://github.com/Shenggan/BCCD_Dataset" target="_blank" rel="noopener">BCCD</a>. Данные требуют проверки лицензии и пригодности перед использованием.</p></div>
+      </section>
+
+      <section id="view-profile" class="view">
+        <div class="intro-row"><div><h2>Профиль и история</h2><p>Локальная карточка пользователя и сохранённые результаты исследований.</p></div></div>
+        <div class="profile-grid"><form id="profileForm" class="panel profile-form"><div class="panel-head"><div><span class="step">01</span><h3>Личные данные</h3></div><span class="subtle" id="profileUsername">Не вошли</span></div><div class="form-two"><label>Имя<input name="first_name" autocomplete="given-name"></label><label>Фамилия<input name="last_name" autocomplete="family-name"></label></div><div class="form-two"><label>Возраст<input name="age" type="number" min="1" max="130"></label><label>Домашний адрес<input name="home_address" autocomplete="street-address"></label></div><p class="hb-help">Профиль хранится в локальной базе проекта. Адрес нужен только как личная заметка и никуда не отправляется.</p><button class="button button-primary" type="submit">Сохранить изменения</button></form><div class="panel history-panel"><div class="panel-head"><div><span class="step">02</span><h3>Последние анализы</h3></div></div><div id="historyList" class="history-list"><div class="empty-state compact"><b>История пока пуста</b><p>Сохранённые анализы появятся здесь.</p></div></div></div></div>
+      </section>
+      <footer class="footer"><span>CellVision · исследовательский прототип</span><span>Не предназначен для самостоятельной диагностики</span></footer>
+    </main>
+  </div>
+
+  <div id="authOverlay" class="auth-overlay"><div class="auth-card"><div class="brand auth-brand"><span class="brand-mark">cv</span><span>CellVision<small>LAB · RESEARCH</small></span></div><span class="eyebrow">ДОБРО ПОЖАЛОВАТЬ</span><h2 id="authTitle">Войдите в рабочее пространство</h2><p>Создайте локальный аккаунт, чтобы сохранять историю исследований.</p><form id="authForm"><label>Логин<input id="authUsername" required minlength="3" autocomplete="username" placeholder="Ваш логин"></label><label>Пароль<input id="authPassword" type="password" required minlength="8" autocomplete="current-password" placeholder="Не менее 8 символов"></label><div id="authError" class="form-error"></div><button class="button button-primary button-wide" type="submit" id="authSubmit">Войти →</button></form><button id="authToggle" class="auth-toggle">Нет аккаунта? <b>Создать его</b></button><small class="auth-privacy">Это локальный прототип: не используйте реальные идентификаторы и медицинские данные пациентов.</small></div></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

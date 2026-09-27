@@ -1,0 +1,164 @@
+{"kind":"deck","id":"pr/x5efn5","name":"Deck"}
+{"kind":"layout","layoutId":"2ef34e79-8d03-474d-a4bc-212488f80950","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"5acd445d-3af2-498d-b9e0-85a84d437a4e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ld175b","slide":1,"title":"НАУЧНАЯ РАЗРАБОТКА","textShapes":8}
+{"kind":"textbox","id":"sh/jmxk7e9g","slide":1,"text":"НАУЧНАЯ РАЗРАБОТКА","textPreview":"НАУЧНАЯ РАЗРАБОТКА","textChars":18,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/4n6l0za1","slide":1,"text":"CellVision","textPreview":"CellVision","textChars":10,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/5ofm94rm","slide":1,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/uh43upsz","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/vidk3u9k","slide":1,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/wj6lwza5","slide":1,"text":"Исследовательская визуализация\nмикрофотографий мазка крови","textPreview":"Исследовательская визуализация | микрофотографий мазка крови","textChars":58,"textLines":2,"bbox":[74,190,870,135]}
+{"kind":"textbox","id":"sh/hkf254rq","slide":1,"text":"Контроль качества кадра и воспроизводимое изучение морфологии эритроцитов","textPreview":"Контроль качества кадра и воспроизводимое изучение морфологии эритроцитов","textChars":73,"textLines":1,"bbox":[76,358,770,62]}
+{"kind":"shape","id":"sh/ed836t83","slide":1,"bbox":[76,478,52,4]}
+{"kind":"textbox","id":"sh/feh4fy9o","slide":1,"text":"Акунова Салтанат","textPreview":"Акунова Салтанат","textChars":16,"textLines":1,"bbox":[76,511,550,38]}
+{"kind":"textbox","id":"sh/nuh8re94","slide":1,"text":"Индивидуальный проект  ·  STEMKyz Cup 2026","textPreview":"Индивидуальный проект  ·  STEMKyz Cup 2026","textChars":42,"textLines":1,"bbox":[76,555,700,34]}
+{"kind":"notes","id":"nt/ld175b","slide":1,"text":"Я Акунова Салтанат, автор индивидуального проекта CellVision. Это исследовательский программный прототип для визуализации микрофотографий мазка крови. Я сосредоточилась на качестве снимка и изучении морфологии клеток. Проект не ставит диагноз."}
+{"kind":"slide","id":"sl/71y61f","slide":2,"title":"02  /  ПРОБЛЕМА","textShapes":10}
+{"kind":"textbox","id":"sh/6t0ne14j","slide":2,"text":"02  /  ПРОБЛЕМА","textPreview":"02  /  ПРОБЛЕМА","textChars":15,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/twr69g3u","slide":2,"text":"Снимок влияет на оценку клеток","textPreview":"Снимок влияет на оценку клеток","textChars":30,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/svi5gbmp","slide":2,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/fy9ob6l0","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/ux0ni14f","slide":2,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/h0b6dg36","slide":2,"text":"Фокус, освещение, окраска, загрязнения и наложение клеток меняют то, что видит наблюдатель и алгоритм.","textPreview":"Фокус, освещение, окраска, загрязнения и наложение клеток меняют то, что видит наблюдатель и алгоритм.","textChars":102,"textLines":1,"bbox":[74,185,1090,82]}
+{"kind":"textbox","id":"sh/gzi5kbml","slide":2,"text":"Ручная работа","textPreview":"Ручная работа","textChars":13,"textLines":1,"bbox":[74,315,485,30]}
+{"kind":"textbox","id":"sh/v2p4zmlw","slide":2,"text":"Разметка контуров и подсчёт занимают время.","textPreview":"Разметка контуров и подсчёт занимают время.","textChars":43,"textLines":1,"bbox":[74,349,485,58]}
+{"kind":"textbox","id":"sh/a1gn6h4b","slide":2,"text":"Разные наблюдатели","textPreview":"Разные наблюдатели","textChars":18,"textLines":1,"bbox":[655,315,485,30]}
+{"kind":"textbox","id":"sh/gnets3ah","slide":2,"text":"Границы клетки можно отметить по-разному.","textPreview":"Границы клетки можно отметить по-разному.","textChars":41,"textLines":1,"bbox":[655,349,485,58]}
+{"kind":"textbox","id":"sh/h8nul8r2","slide":2,"text":"Задача проекта: сделать шаги просмотра снимка наглядными и дать возможность проверить результат разметки.","textPreview":"Задача проекта: сделать шаги просмотра снимка наглядными и дать возможность проверить результат разметки.","textChars":105,"textLines":1,"bbox":[74,490,1040,92]}
+{"kind":"notes","id":"nt/71y61f","slide":2,"text":"Проблема проекта не в том, что микроскопия бесполезна. Проблема в том, что анализ изображения чувствителен к качеству съёмки и ручная разметка может различаться. В статье RedTell отмечено, что морфологическая оценка вручную бывает субъективной и требует времени. CellVision исследует именно цифровую помощь при просмотре, а не замену гематолога. Источник: Sadafi et al., RedTell, Frontiers in Physiology (2023), https://doi.org/10.3389/fphys.2023.1058720."}
+{"kind":"slide","id":"sl/cwak7a","slide":3,"title":"03  /  ИДЕЯ И ЗАДАЧИ","textShapes":15}
+{"kind":"textbox","id":"sh/4jqhofil","slide":3,"text":"03  /  ИДЕЯ И ЗАДАЧИ","textPreview":"03  /  ИДЕЯ И ЗАДАЧИ","textChars":20,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/jihgfah0","slide":3,"text":"Один снимок — понятный путь проверки","textPreview":"Один снимок — понятный путь проверки","textChars":36,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/ih8zm50f","slide":3,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/t8jilkz2","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/s7ahsfih","slide":3,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"shape","id":"sh/r610jahc","slide":3,"bbox":[74,225,230,7]}
+{"kind":"textbox","id":"sh/6lszqp0r","slide":3,"text":"Качество кадра","textPreview":"Качество кадра","textChars":14,"textLines":1,"bbox":[74,253,242,40]}
+{"kind":"textbox","id":"sh/1c3ip4ze","slide":3,"text":"резкость, свет,\nпересвет","textPreview":"резкость, свет, | пересвет","textChars":24,"textLines":2,"bbox":[74,301,240,78]}
+{"kind":"shape","id":"sh/gbahwzit","slide":3,"bbox":[312,228,43,0]}
+{"kind":"shape","id":"sh/m5ove1g3","slide":3,"bbox":[355,225,230,7]}
+{"kind":"textbox","id":"sh/76xw76ho","slide":3,"text":"Обработка","textPreview":"Обработка","textChars":9,"textLines":1,"bbox":[355,253,242,40]}
+{"kind":"textbox","id":"sh/87qdgby9","slide":3,"text":"маска и контуры\nклеток","textPreview":"маска и контуры | клеток","textChars":22,"textLines":2,"bbox":[355,301,240,78]}
+{"kind":"shape","id":"sh/98ze9gze","slide":3,"bbox":[593,228,43,0]}
+{"kind":"shape","id":"sh/u98vilgz","slide":3,"bbox":[636,225,230,7]}
+{"kind":"textbox","id":"sh/vahwbqhk","slide":3,"text":"Измерения","textPreview":"Измерения","textChars":9,"textLines":1,"bbox":[636,253,242,40]}
+{"kind":"textbox","id":"sh/wbqdkvy5","slide":3,"text":"форма и размер\nобъектов","textPreview":"форма и размер | объектов","textChars":23,"textLines":2,"bbox":[636,301,240,78]}
+{"kind":"shape","id":"sh/hczedgzq","slide":3,"bbox":[874,228,43,0]}
+{"kind":"shape","id":"sh/qd4v6hgv","slide":3,"bbox":[917,225,230,7]}
+{"kind":"textbox","id":"sh/bedczmhg","slide":3,"text":"Проверка","textPreview":"Проверка","textChars":8,"textLines":1,"bbox":[917,253,242,40]}
+{"kind":"textbox","id":"sh/fits7ix8","slide":3,"text":"сравнение с\nручной маской","textPreview":"сравнение с | ручной маской","textChars":25,"textLines":2,"bbox":[917,301,240,78]}
+{"kind":"textbox","id":"sh/ehkbydwn","slide":3,"text":"Цель","textPreview":"Цель","textChars":4,"textLines":1,"bbox":[74,426,105,28]}
+{"kind":"textbox","id":"sh/1kba9sfe","slide":3,"text":"Помочь учащимся и исследователям воспроизводимо изучать морфологию и замечать ограничения снимка.","textPreview":"Помочь учащимся и исследователям воспроизводимо изучать морфологию и замечать ограничения снимка.","textChars":97,"textLines":1,"bbox":[74,461,1060,70]}
+{"kind":"textbox","id":"sh/gj2t0net","slide":3,"text":"Задачи: автоматизировать первичную обработку, показать измерения, сохранить результаты и сопоставить их с ручной разметкой.","textPreview":"Задачи: автоматизировать первичную обработку, показать измерения, сохранить результаты и сопоставить их с ручной разметкой.","textChars":123,"textLines":1,"bbox":[74,555,1080,55]}
+{"kind":"notes","id":"nt/cwak7a","slide":3,"text":"Цель CellVision — сделать исследовательскую работу с микрофотографиями более воспроизводимой и понятной. Веб-интерфейс принимает изображение, оценивает базовые признаки его качества, выполняет сегментацию, считает измерения объектов и позволяет визуально сопоставить маску с ручной разметкой. Такая схема согласуется с общим исследовательским подходом RedTell: сегментация, извлечение признаков, поддержка разметки и классификация. Источник: https://doi.org/10.3389/fphys.2023.1058720."}
+{"kind":"slide","id":"sl/lxeiti","slide":4,"title":"04  /  РЕАЛИЗАЦИЯ","textShapes":16}
+{"kind":"textbox","id":"sh/hgrilg32","slide":4,"text":"04  /  РЕАЛИЗАЦИЯ","textPreview":"04  /  РЕАЛИЗАЦИЯ","textChars":17,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/ud0ja14r","slide":4,"text":"Как устроен прототип","textPreview":"Как устроен прототип","textChars":20,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/ve90j6lc","slide":4,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/4j21gbmt","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/54bipg3e","slide":4,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/ih0jel4n","slide":4,"text":"Браузер","textPreview":"Браузер","textChars":7,"textLines":1,"bbox":[74,205,145,34]}
+{"kind":"textbox","id":"sh/3i90n6l8","slide":4,"text":"HTML · CSS · JavaScript","textPreview":"HTML · CSS · JavaScript","textChars":23,"textLines":1,"bbox":[74,249,380,37]}
+{"kind":"shape","id":"sh/kny14rmp","slide":4,"bbox":[455,228,76,0]}
+{"kind":"textbox","id":"sh/l87idw3u","slide":4,"text":"Локальный сервер","textPreview":"Локальный сервер","textChars":16,"textLines":1,"bbox":[552,205,270,34]}
+{"kind":"textbox","id":"sh/9or2xwbu","slide":4,"text":"Python · OpenCV","textPreview":"Python · OpenCV","textChars":15,"textLines":1,"bbox":[552,249,300,37]}
+{"kind":"shape","id":"sh/8ny1ora9","slide":4,"bbox":[847,228,76,0]}
+{"kind":"textbox","id":"sh/nmpkvmto","slide":4,"text":"Результат","textPreview":"Результат","textChars":9,"textLines":1,"bbox":[944,205,220,34]}
+{"kind":"textbox","id":"sh/mlgjmhs3","slide":4,"text":"маска · таблица · экспорт","textPreview":"маска · таблица · экспорт","textChars":25,"textLines":1,"bbox":[944,249,270,60]}
+{"kind":"textbox","id":"sh/xsr21wrq","slide":4,"text":"Сегментация","textPreview":"Сегментация","textChars":11,"textLines":1,"bbox":[74,362,235,34]}
+{"kind":"textbox","id":"sh/wri1sra5","slide":4,"text":"Сглаживание, порог Отсу, морфологическая обработка и Watershed разделяют предполагаемые клетки.","textPreview":"Сглаживание, порог Отсу, морфологическая обработка и Watershed разделяют предполагаемые клетки.","textChars":95,"textLines":1,"bbox":[74,406,475,90]}
+{"kind":"textbox","id":"sh/vq9kz69k","slide":4,"text":"Измерения","textPreview":"Измерения","textChars":9,"textLines":1,"bbox":[655,362,235,34]}
+{"kind":"textbox","id":"sh/ap0jq1sf","slide":4,"text":"Площадь, эквивалентный диаметр, круглость, эксцентриситет и вариация размеров по кадру.","textPreview":"Площадь, эквивалентный диаметр, круглость, эксцентриситет и вариация размеров по кадру.","textChars":87,"textLines":1,"bbox":[655,406,495,90]}
+{"kind":"textbox","id":"sh/5gb25gr2","slide":4,"text":"Также: проверка качества кадра, очистка с визуальным сравнением, CSV/PDF, история, атлас и учебная лаборатория.","textPreview":"Также: проверка качества кадра, очистка с визуальным сравнением, CSV/PDF, история, атлас и учебная лаборатория.","textChars":111,"textLines":1,"bbox":[74,520,1090,34]}
+{"kind":"textbox","id":"sh/kfilwbah","slide":4,"text":"ОАК: OCR распознаёт поля, Hb сравнивается с порогом. Фото мазка не даёт вероятность анемии.","textPreview":"ОАК: OCR распознаёт поля, Hb сравнивается с порогом. Фото мазка не даёт вероятность анемии.","textChars":91,"textLines":1,"bbox":[74,565,1090,48]}
+{"kind":"notes","id":"nt/lxeiti","slide":4,"text":"Приложение работает локально как веб-прототип: интерфейс построен на HTML, CSS и JavaScript, сервер на Python, обработка изображений выполняется OpenCV. Алгоритм сначала сглаживает изображение, затем использует порог Отсу, морфологические операции и Watershed. Для объектов рассчитываются площадь, эквивалентный диаметр, круглость, эксцентриситет и цветовая характеристика. При заданной пользователем шкале пиксели можно перевести в микрометры. Это измерения изображения; вариация размеров не является лабораторным RDW. Есть экспорт таблицы в CSV и печать отчёта в PDF."}
+{"kind":"slide","id":"sl/pyhbyi","slide":5,"title":"05  /  УЧЕБНАЯ ЛАБОРАТОРИЯ","textShapes":8}
+{"kind":"textbox","id":"sh/nmhkr614","slide":5,"text":"05  /  УЧЕБНАЯ ЛАБОРАТОРИЯ","textPreview":"05  /  УЧЕБНАЯ ЛАБОРАТОРИЯ","textChars":26,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/onq10bip","slide":5,"text":"Визуальный опыт с качеством снимка","textPreview":"Визуальный опыт с качеством снимка","textChars":34,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/9oz2tgja","slide":5,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/ehojuh07","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/zix0nm1s","slide":5,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/0j61wrid","slide":5,"text":"Синтетический пример","textPreview":"Синтетический пример","textChars":20,"textLines":1,"bbox":[74,202,450,36]}
+{"kind":"textbox","id":"sh/1kfipwjy","slide":5,"text":"В программе можно сравнить изображение до и после очистки и увидеть, как фильтр меняет мелкие детали.","textPreview":"В программе можно сравнить изображение до и после очистки и увидеть, как фильтр меняет мелкие детали.","textChars":101,"textLines":1,"bbox":[74,254,455,104]}
+{"kind":"textbox","id":"sh/qt4jqh0b","slide":5,"text":"Это иллюстрация для эксперимента, а не микрофотография пациента.","textPreview":"Это иллюстрация для эксперимента, а не микрофотография пациента.","textChars":64,"textLines":1,"bbox":[74,408,455,74]}
+{"kind":"textbox","id":"sh/rud0jm1w","slide":5,"text":"Опыт помогает обсуждать шум и артефакты, но не подтверждает качество анализа клеток.","textPreview":"Опыт помогает обсуждать шум и артефакты, но не подтверждает качество анализа клеток.","textChars":84,"textLines":1,"bbox":[74,512,455,80]}
+{"kind":"image","id":"im/kfm5k32h","slide":5,"name":"","alt":"Синтетический учебный пример с условными клетками и шумом","bbox":[590,214,575,432]}
+{"kind":"notes","id":"nt/pyhbyi","slide":5,"text":"Здесь показан сгенерированный учебный пример из проекта, а не реальный мазок и не клинические данные. Учебная лаборатория позволяет наглядно рассматривать обработку изображения, в том числе очистку шума, и обсуждать возможную потерю мелких деталей при фильтрации. Не выдавать этот пример за результат работы на образце пациента. Для биомедицинского анализа нужна отдельная проверка на реальных изображениях."}
+{"kind":"slide","id":"sl/i7hykl","slide":6,"title":"06  /  РЕЗУЛЬТАТ ПРОЕКТА","textShapes":13}
+{"kind":"textbox","id":"sh/a14nux47","slide":6,"text":"06  /  РЕЗУЛЬТАТ ПРОЕКТА","textPreview":"06  /  РЕЗУЛЬТАТ ПРОЕКТА","textChars":24,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/x4vmpc3y","slide":6,"text":"Рабочий прототип и инструменты исследования","textPreview":"Рабочий прототип и инструменты исследования","textChars":43,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/w3m5w7md","slide":6,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/jqd4rml4","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/ip4nyh4j","slide":6,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/5sfmtw3u","slide":6,"text":"Кадр","textPreview":"Кадр","textChars":4,"textLines":1,"bbox":[74,207,220,36]}
+{"kind":"textbox","id":"sh/krm50rmp","slide":6,"text":"Подсказки о резкости и освещении; визуальное сравнение очистки и кадров «до/после».","textPreview":"Подсказки о резкости и освещении; визуальное сравнение очистки и кадров «до/после».","textChars":83,"textLines":1,"bbox":[74,254,500,90]}
+{"kind":"textbox","id":"sh/7ux4vml0","slide":6,"text":"Клетки","textPreview":"Клетки","textChars":6,"textLines":1,"bbox":[655,207,220,36]}
+{"kind":"textbox","id":"sh/6ton2h4f","slide":6,"text":"Сегментация и измерения объектов; ручная маска с расчётом Dice/IoU.","textPreview":"Сегментация и измерения объектов; ручная маска с расчётом Dice/IoU.","textChars":67,"textLines":1,"bbox":[655,254,500,90]}
+{"kind":"shape","id":"sh/436xcve1","slide":6,"bbox":[74,382,1100,2]}
+{"kind":"textbox","id":"sh/54fy50vm","slide":6,"text":"Сохранение и обучение","textPreview":"Сохранение и обучение","textChars":21,"textLines":1,"bbox":[74,422,450,36]}
+{"kind":"textbox","id":"sh/i1ofalwb","slide":6,"text":"CSV по объектам, PDF‑отчёт, история пользователя, атлас и учебная лаборатория.","textPreview":"CSV по объектам, PDF‑отчёт, история пользователя, атлас и учебная лаборатория.","textChars":78,"textLines":1,"bbox":[74,471,500,90]}
+{"kind":"textbox","id":"sh/j2xg3qdw","slide":6,"text":"Отдельный CBC‑раздел","textPreview":"Отдельный CBC‑раздел","textChars":20,"textLines":1,"bbox":[655,422,460,36]}
+{"kind":"textbox","id":"sh/s7qhgved","slide":6,"text":"OCR распознаёт бланк, а гемоглобин сравнивается с выбранным порогом. Фото мазка не даёт вероятность анемии.","textPreview":"OCR распознаёт бланк, а гемоглобин сравнивается с выбранным порогом. Фото мазка не даёт вероятность анемии.","textChars":107,"textLines":1,"bbox":[655,471,510,105]}
+{"kind":"textbox","id":"sh/t8zy90vy","slide":6,"text":"Функции прототипа реализованы; точность сегментации требует дальнейшей независимой проверки.","textPreview":"Функции прототипа реализованы; точность сегментации требует дальнейшей независимой проверки.","textChars":92,"textLines":1,"bbox":[74,603,1100,34]}
+{"kind":"notes","id":"nt/i7hykl","slide":6,"text":"Подтверждённый результат проекта — собранный локальный веб-прототип с перечисленными инструментами: контроль качества изображения, очистка и сравнение снимков, измерения объектов, ручная маска, CSV/PDF, история, атлас, учебная лаборатория и отдельный OCR/CBC экран. Наличие функций не доказывает измерительную или клиническую точность. По проведённой внутренней проверке сегментации нужно говорить, что надёжность пока не подтверждена и следующий этап — независимая проверка. Не заявлять вымышленные проценты как реальные."}
+{"kind":"slide","id":"sl/53lcjt","slide":7,"title":"07  /  ПРИМЕНЕНИЕ","textShapes":11}
+{"kind":"textbox","id":"sh/fmd8nqps","slide":7,"text":"07  /  ПРИМЕНЕНИЕ","textPreview":"07  /  ПРИМЕНЕНИЕ","textChars":17,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/0nm9gv6d","slide":7,"text":"Для учебной и исследовательской работы","textPreview":"Для учебной и исследовательской работы","textChars":38,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/1ovqp07y","slide":7,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/2p4riloj","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/nqx8rq54","slide":7,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/or69kv6p","slide":7,"text":"Учащийся","textPreview":"Учащийся","textChars":8,"textLines":1,"bbox":[74,205,180,34]}
+{"kind":"textbox","id":"sh/psfqt0nu","slide":7,"text":"Изучает морфологию, очистку изображения и оптические эффекты в учебной лаборатории.","textPreview":"Изучает морфологию, очистку изображения и оптические эффекты в учебной лаборатории.","textChars":83,"textLines":1,"bbox":[74,250,470,90]}
+{"kind":"textbox","id":"sh/itk761oz","slide":7,"text":"Исследователь","textPreview":"Исследователь","textChars":13,"textLines":1,"bbox":[655,205,260,34]}
+{"kind":"textbox","id":"sh/3ut8f6pk","slide":7,"text":"Фиксирует измерения, выгружает CSV и сравнивает разметки. CBC-экран отдельно показывает лабораторные показатели.","textPreview":"Фиксирует измерения, выгружает CSV и сравнивает разметки. CBC-экран отдельно показывает лабораторные показатели.","textChars":112,"textLines":1,"bbox":[655,250,510,90]}
+{"kind":"shape","id":"sh/n6d4n2dw","slide":7,"bbox":[74,383,1100,2]}
+{"kind":"textbox","id":"sh/254nuxwb","slide":7,"text":"Потенциальное воздействие","textPreview":"Потенциальное воздействие","textChars":25,"textLines":1,"bbox":[74,420,580,36]}
+{"kind":"textbox","id":"sh/p8vmpcv2","slide":7,"text":"Более прозрачная работа с микрофотографией и удобный сбор данных для последующей проверки алгоритмов.","textPreview":"Более прозрачная работа с микрофотографией и удобный сбор данных для последующей проверки алгоритмов.","textChars":101,"textLines":1,"bbox":[74,472,1010,75]}
+{"kind":"textbox","id":"sh/o7m5w7eh","slide":7,"text":"Пока продукт не предназначен для клинического решения.","textPreview":"Пока продукт не предназначен для клинического решения.","textChars":54,"textLines":1,"bbox":[74,575,1010,40]}
+{"kind":"notes","id":"nt/53lcjt","slide":7,"text":"Применение прототипа сегодня — обучение и пилотная исследовательская работа с изображениями. Студент может увидеть, как качество кадра и наложение клеток мешают разметке. Исследователь может сохранить измерения, экспортировать их и проверить маску относительно ручной. Потенциальное воздействие появится, если качество метода улучшится и его независимо проверят. Сейчас это не медицинское изделие и не инструмент для клинического решения."}
+{"kind":"slide","id":"sl/jnlc6v","slide":8,"title":"08  /  ОТЛИЧИЕ ПОДХОДА","textShapes":9}
+{"kind":"textbox","id":"sh/1c72dor2","slide":8,"text":"08  /  ОТЛИЧИЕ ПОДХОДА","textPreview":"08  /  ОТЛИЧИЕ ПОДХОДА","textChars":22,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/e9g3i9sb","slide":8,"text":"Акцент на прозрачной проверке","textPreview":"Акцент на прозрачной проверке","textChars":29,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/zapkbe9w","slide":8,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/ozilo3qd","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/90r2h8ry","slide":8,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/mdg3mts7","slide":8,"text":"В одном интерфейсе собраны просмотр кадра, базовая оценка его качества, сегментация, измерения по клеткам и сравнение с ручной маской.","textPreview":"В одном интерфейсе собраны просмотр кадра, базовая оценка его качества, сегментация, измерения по клеткам и сравнение с ручной маской.","textChars":134,"textLines":1,"bbox":[74,202,1055,116]}
+{"kind":"textbox","id":"sh/ny9kfy9s","slide":8,"text":"Что можно перепроверить","textPreview":"Что можно перепроверить","textChars":23,"textLines":1,"bbox":[74,374,420,36]}
+{"kind":"textbox","id":"sh/43e1cza9","slide":8,"text":"Каждый контур виден поверх оригинала. Табличные показатели можно сохранить и анализировать отдельно.","textPreview":"Каждый контур виден поверх оригинала. Табличные показатели можно сохранить и анализировать отдельно.","textChars":100,"textLines":1,"bbox":[74,420,490,94]}
+{"kind":"textbox","id":"sh/p4n254ru","slide":8,"text":"Что важно уточнить","textPreview":"Что важно уточнить","textChars":18,"textLines":1,"bbox":[655,374,420,36]}
+{"kind":"textbox","id":"sh/t03mx4j6","slide":8,"text":"Инструменты компьютерного зрения для эритроцитов уже существуют. Отличие CellVision — учебный формат и доступность проверки в небольшом локальном прототипе.","textPreview":"Инструменты компьютерного зрения для эритроцитов уже существуют. Отличие CellVision — учебный формат и доступность проверки в небольшом л...","textChars":156,"textLines":1,"bbox":[655,420,510,108]}
+{"kind":"notes","id":"nt/jnlc6v","slide":8,"text":"Я не заявляю, что подобный анализ ранее не существовал. Научные инструменты вроде RedTell уже объединяют сегментацию, морфологические признаки, аннотацию и классификацию. Практический акцент CellVision — доступный учебный веб-интерфейс, где видно, что именно выделил алгоритм и как это можно сравнить с ручной маской. Ключевая ценность — прозрачность проверки, а не самостоятельное медицинское заключение. Источник сравнения: https://doi.org/10.3389/fphys.2023.1058720."}
+{"kind":"slide","id":"sl/xugrld","slide":9,"title":"09  /  РАЗВИТИЕ","textShapes":16}
+{"kind":"textbox","id":"sh/8ryh472d","slide":9,"text":"09  /  РАЗВИТИЕ","textPreview":"09  /  РАЗВИТИЕ","textChars":15,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/7qp0v2l8","slide":9,"text":"План: улучшать по измеримым этапам","textPreview":"План: улучшать по измеримым этапам","textChars":34,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/65gz2xkn","slide":9,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/hwri1c3a","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/gvih872p","slide":9,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/vu90z2l4","slide":9,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[74,188,56,34]}
+{"kind":"textbox","id":"sh/ut0z6xkj","slide":9,"text":"Исправить сегментацию","textPreview":"Исправить сегментацию","textChars":21,"textLines":1,"bbox":[145,188,380,34]}
+{"kind":"textbox","id":"sh/50bi5w36","slide":9,"text":"Подобрать метод под тип съёмки; отдельно фиксировать окрашенные и фазово-контрастные кадры.","textPreview":"Подобрать метод под тип съёмки; отдельно фиксировать окрашенные и фазово-контрастные кадры.","textChars":91,"textLines":1,"bbox":[535,188,625,70]}
+{"kind":"shape","id":"sh/4zihcr2l","slide":9,"bbox":[145,267,1015,1]}
+{"kind":"textbox","id":"sh/e58j2xsn","slide":9,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[74,300,56,34]}
+{"kind":"textbox","id":"sh/f6hkv2t8","slide":9,"text":"Собрать независимую разметку","textPreview":"Собрать независимую разметку","textChars":28,"textLines":1,"bbox":[145,300,380,34]}
+{"kind":"textbox","id":"sh/g7q147at","slide":9,"text":"Два наблюдателя размечают одни и те же кадры; считать согласие после согласованного протокола.","textPreview":"Два наблюдателя размечают одни и те же кадры; считать согласие после согласованного протокола.","textChars":94,"textLines":1,"bbox":[535,300,625,70]}
+{"kind":"shape","id":"sh/18z2xcbe","slide":9,"bbox":[145,379,1015,1]}
+{"kind":"textbox","id":"sh/2tsj6hsj","slide":9,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[74,412,56,34]}
+{"kind":"textbox","id":"sh/3u1kz2t4","slide":9,"text":"Проверить обобщение","textPreview":"Проверить обобщение","textChars":19,"textLines":1,"bbox":[145,412,380,34]}
+{"kind":"textbox","id":"sh/ova187ap","slide":9,"text":"Разделять данные по пациентам и мазкам; тестировать на отдельном источнике и микроскопе.","textPreview":"Разделять данные по пациентам и мазкам; тестировать на отдельном источнике и микроскопе.","textChars":88,"textLines":1,"bbox":[535,412,625,70]}
+{"kind":"shape","id":"sh/pwj21cra","slide":9,"bbox":[145,491,1015,1]}
+{"kind":"textbox","id":"sh/ixojudsf","slide":9,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[74,524,56,34]}
+{"kind":"textbox","id":"sh/jyx03it0","slide":9,"text":"Только затем расширять выводы","textPreview":"Только затем расширять выводы","textChars":29,"textLines":1,"bbox":[145,524,380,34]}
+{"kind":"textbox","id":"sh/7idgve9s","slide":9,"text":"Сначала оценить сегментацию и морфологию; не переводить их в вероятность анемии без связанных CBC и клинической проверки.","textPreview":"Сначала оценить сегментацию и морфологию; не переводить их в вероятность анемии без связанных CBC и клинической проверки.","textChars":121,"textLines":1,"bbox":[535,524,625,70]}
+{"kind":"notes","id":"nt/xugrld","slide":9,"text":"Следующий этап должен начинаться с качества сегментации. Затем два наблюдателя независимо размечают общие изображения, чтобы оценить воспроизводимость вручную. Данные делятся по пациентам и исходным мазкам, чтобы похожие кадры не попадали одновременно в обучение и тест. Можно изучить AneRBC: это открытый набор с 1 000 исходных изображений и связанными CBC, морфологическими отчётами и экспертными масками. Но это набор одного центра и прибора, поэтому внешний тест на других данных всё равно необходим. Источники: AneRBC paper https://doi.org/10.1093/database/baae120; dataset https://data.mendeley.com/datasets/hms3sjzt7f/1."}
+{"kind":"slide","id":"sl/63elih","slide":10,"title":"10  /  ЗАКЛЮЧЕНИЕ","textShapes":8}
+{"kind":"textbox","id":"sh/va94bydw","slide":10,"text":"10  /  ЗАКЛЮЧЕНИЕ","textPreview":"10  /  ЗАКЛЮЧЕНИЕ","textChars":17,"textLines":1,"bbox":[74,40,900,24]}
+{"kind":"textbox","id":"sh/gbil43u1","slide":10,"text":"Сначала надёжная визуализация","textPreview":"Сначала надёжная визуализация","textChars":29,"textLines":1,"bbox":[74,79,1120,63]}
+{"kind":"shape","id":"sh/hcrmd8vm","slide":10,"bbox":[74,150,64,4]}
+{"kind":"textbox","id":"sh/65g3y9cz","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1150,654,55,26]}
+{"kind":"textbox","id":"sh/76pk7edk","slide":10,"text":"CELLVISION  /  STEMKYZ CUP 2026","textPreview":"CELLVISION  /  STEMKYZ CUP 2026","textChars":31,"textLines":1,"bbox":[74,656,500,20]}
+{"kind":"textbox","id":"sh/87yl0ju5","slide":10,"text":"CellVision уже показывает путь от микрофотографии к измерениям и проверяемой маске.","textPreview":"CellVision уже показывает путь от микрофотографии к измерениям и проверяемой маске.","textChars":83,"textLines":1,"bbox":[74,200,1045,88]}
+{"kind":"shape","id":"sh/t8729ovq","slide":10,"bbox":[74,336,68,4]}
+{"kind":"textbox","id":"sh/q103adcj","slide":10,"text":"Тест выявил недосчёт клеток. Это ограничение определяет следующий этап работы.","textPreview":"Тест выявил недосчёт клеток. Это ограничение определяет следующий этап работы.","textChars":78,"textLines":1,"bbox":[74,382,1030,86]}
+{"kind":"textbox","id":"sh/r2t4jido","slide":10,"text":"Цель развития — сделать измерения воспроизводимыми и проверить их независимой ручной разметкой.","textPreview":"Цель развития — сделать измерения воспроизводимыми и проверить их независимой ручной разметкой.","textChars":95,"textLines":1,"bbox":[74,506,1020,82]}
+{"kind":"textbox","id":"sh/nupc3adc","slide":10,"text":"Спасибо за внимание","textPreview":"Спасибо за внимание","textChars":19,"textLines":1,"bbox":[74,610,640,40]}
+{"kind":"notes","id":"nt/63elih","slide":10,"text":"В заключение, CellVision — работающий исследовательский прототип для визуализации качества микрофотографий и изучения морфологии клеток. Проведённый тест не подтвердил надёжность текущей сегментации: метод существенно недосчитывает клетки. Поэтому следующий шаг — улучшить алгоритм и проверить его на независимой серии снимков с экспертной разметкой. До такой проверки система остаётся учебным инструментом, а не диагностической системой."}

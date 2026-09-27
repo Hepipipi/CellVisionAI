@@ -1,3 +1,7 @@
 venv/
 .venv/
 __pycache__/
+cellvision.db
+data/models/
+data/datasets/
+.env
